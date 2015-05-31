@@ -11,3 +11,11 @@ configure :build do
   activate :asset_hash
   activate :relative_assets
 end
+
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.branch = 'master'
+  deploy.build_before = true
+end
+
+activate :directory_indexes
