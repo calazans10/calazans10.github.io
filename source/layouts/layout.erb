@@ -1,22 +1,12 @@
 <!doctype html>
 <html>
-  <head>
-    <title><%= current_page.data.title %></title>
-
-    <meta charset="utf-8">
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Jeferson Farias Calazans is a Software Developer from Rio de Janeiro, Brazil">
-
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
-    <%= stylesheet_link_tag "normalize", "all" %>
-    <%= javascript_include_tag  "all" %>
-    <%= favicon_tag 'images/favicon.png' %>
-  </head>
+  <%= partial "partials/head" %>
 
   <body>
     <main>
       <%= yield %>
     </main>
+
+    <%= partial "partials/script" %>
   </body>
 </html>

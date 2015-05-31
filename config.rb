@@ -7,8 +7,10 @@ set :js_dir, 'javascripts'
 set :images_dir, 'images'
 
 configure :build do
-  activate :minify_css
   activate :asset_hash
+  activate :gzip
+  activate :minify_css
+  activate :minify_html
   activate :relative_assets
 end
 
@@ -19,3 +21,4 @@ activate :deploy do |deploy|
 end
 
 activate :directory_indexes
+
