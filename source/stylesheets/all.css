@@ -58,9 +58,10 @@ body {
 }
 
 img {
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   margin-top: 60px;
+  border: 6px solid #fafafa;
   border-radius: 50%;
 }
 
