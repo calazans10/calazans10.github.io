@@ -5,51 +5,66 @@
     <meta charset="utf-8">
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
     <title><%= current_page.data.title %></title>
-    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag :application %>
     <%= javascript_include_tag :application %>
   </head>
   <body>
-    <header>
-      <h1><a href="<% url_for 'index.html' %>"><span>Jeferson Calazans</span></a></h1>
-      <a data-toggle="menu" href="#"><span class="visuallyhidden">Menu</span></a>
-      <nav style="display: none;">
-        <ul>
-          <li>
+    <header class="header">
+      <div class="brand">
+        <a class="brand__logo" href="<% url_for 'index.html' %>">
+          <span>Jeferson Calazans</span>
+        </a>
+      </div>
+      <a data-toggle="menu" href="#">
+        <span class="visuallyhidden">Abrir menu</span>
+      </a>
+      <nav class="menu">
+        <div class="brand brand--light">
+          <a class="brand__logo" href="<% url_for 'index.html' %>">
+            <span class="visuallyhidden">Jeferson Calazans</span>
+          </a>
+        </div>
+        <a data-toggle="menu" href="#">
+          <span class="visuallyhidden">Fechar menu</span>
+        </a>
+        <ul class="menu__items">
+          <li class="menu__item menu__item--active">
             <a href='<% url_for 'index.html' %>'>Home</a>
           </li>
-        <ul>
-          <li>
+          <li class="menu__item">
             <a href='https://twitter.com/calazans10'>Twitter</a>
           </li>
-          <li>
+          <li class="menu__item">
             <a href='https://www.linkedin.com/in/calazans10'>Linkedin</a>
           </li>
-          <li>
+          <li class="menu__item">
             <a href='https://github.com/calazans10'>Github</a>
           </li>
-          <li>
+          <li class="menu__item">
             <a href='mailto:calazans10@gmail.com'>Contato</a>
           </li>
         </ul>
+        <div id="footer">
+          <p>&copy; <%= Date.today.year%> Jeferson Calazans.</p>
+        </div>
       </nav>
     </header>
-    <main>
+    <main class="main">
       <%= yield %>
     </main>
-    <footer>
-      <p>&copy; <%= Date.today.year%> Jeferson Calazans.</p>
-      <ul>
-        <li>
+    <footer class="footer">
+      <p class="footer__copyright">&copy; <%= Date.today.year%> Jeferson Calazans.</p>
+      <ul class="footer__items">
+        <li class="footer__item">
           <a href='https://twitter.com/calazans10'>Twitter</a>
         </li>
-        <li>
+        <li class="footer__item">
           <a href='https://www.linkedin.com/in/calazans10'>Linkedin</a>
         </li>
-        <li>
+        <li class="footer__item">
           <a href='https://github.com/calazans10'>Github</a>
         </li>
-        <li>
+        <li class="footer__item">
           <a href='mailto:calazans10@gmail.com'>Contato</a>
         </li>
       </ul>

@@ -4,151 +4,76 @@
 @import 'normalize';
 @import 'config';
 @import 'base';
+@import 'layout';
+@import 'modules';
 
-header {
-  @include width-for-columns(12);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding-top: 49px;
-  padding-bottom: 99px;
-}
-
-header h1 {
-  font-size: 24px;
-  letter-spacing: 0.5px;
-}
-
-header h1 a {
-  display: block;
-  height: 40px;
-  background: url('/images/logo.png') center left no-repeat;
-  background-size: 48px 100%;
-  line-height: 40px;
-
-  &:hover { text-decoration: none; }
-}
-
-header h1 span { margin-left: 66px; }
-
-header [data-toggle="menu"] {
-  margin-left: auto;
+// TODO: nomear os elementos
+.header [data-toggle="menu"] {
   display: block;
   width: 38px;
   height: 38px;
-  background: url('/images/menu-icon.png') center center no-repeat;
+  margin-left: auto;
+  background: asset-data-url('images/menu-icon.png') center center no-repeat;
   background-size: 100% 100%;
 }
 
-main {
+.menu [data-toggle="menu"] {
+  position: absolute;
+  top: 40px;
+  right: calc(50% - 575px);
+  width: 42px;
+  height: 42px;
+  background: asset-data-url('images/close-icon.png') no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.menu #footer {
   @include width-for-columns(12);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding-bottom: 90px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 63px;
+  border-top: 1px solid rgba(#f0f0f0, 0.1);
+  line-height: 63px;
+}
+
+.menu #footer p {
+  font-family: proxima nova;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.25px;
 }
 
 figure {
   @include span-columns(5);
   margin-right: 49px;
+
+  img { width: 100%; }
 }
 
-figure img {
-  width: 100%;
-}
-
-section {
-  @include span-columns(5);
-}
-
-section p {
-  margin-bottom: 15px;
-  color: #666;
-  font-family: proxima nova;
-  font-size: 16px;
-  letter-spacing: 0.25px;
-  line-height: 24px;
-
-  &:first-of-type {
-    color: #000;
-    font-size: 18px;
+.section__link {
+  &[data-name="twitter"] {
+    width: 20px;
+    height: 17px;
+    background-image: asset-data-url('images/twitter-icon.png');
   }
-}
 
-section ul {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-top: 30px;
-}
+  &[data-name="linkedin"] {
+    width: 20px;
+    height: 20px;
+    background-image: asset-data-url('images/linkedin-icon.png');
+  }
 
-section ul li {
-  display: inline-block;
-  margin-right: 10px;
-}
+  &[data-name="github"] {
+    width: 20px;
+    height: 20px;
+    background-image: asset-data-url('images/github-icon.png');
+  }
 
-section ul a {
-  display: block;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 100% 100%;
-}
-
-section ul [data-name="twitter"] {
-  width: 20px;
-  height: 17px;
-  background-image: url('/images/twitter-icon.png');
-}
-
-section ul [data-name="linkedin"] {
-  width: 20px;
-  height: 20px;
-  background-image: url('/images/linkedin-icon.png');
-}
-
-section ul [data-name="github"] {
-  width: 20px;
-  height: 20px;
-  background-image: url('/images/github-icon.png');
-}
-
-section ul [data-name="message"] {
-  width: 22px;
-  height: 16px;
-  background-image: url('/images/message-icon.png');
-}
-
-footer {
-  @include width-for-columns(12);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding-top: 23px;
-  padding-bottom: 23px;
-  border-top: 1px solid rgba(#000, 0.05);
-}
-
-footer p {
-  color: #888;
-  font-family: proxima nova;
-  font-size: 16px;
-  font-weight: 400;
-  letter-spacing: 0.25px;
-  line-height: 15px;
-}
-
-footer ul {
-  margin-left: auto;
-}
-
-footer ul li {
-  display: inline-block;
-  margin-right: 37px;
-  font-family: proxima nova;
-  font-size: 16px;
-  font-weight: 400;
-  letter-spacing: 0.25px;
-  line-height: 15px;
-
-  &:last-child { margin-right: 0; }
+  &[data-name="message"] {
+    width: 22px;
+    height: 16px;
+    background-image: asset-data-url('images/message-icon.png');
+  }
 }
