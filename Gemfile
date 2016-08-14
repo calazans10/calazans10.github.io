@@ -1,8 +1,9 @@
 source 'http://rubygems.org'
 
-gem 'middleman', '~>3.4.0'
-gem 'middleman-deploy', '~> 1.0'
-gem 'middleman-livereload', '~> 3.4.3'
-gem 'middleman-minify-html','~> 3.4.1'
-gem 'wdm', '~> 0.1.0', :platforms => [:mswin, :mingw]
+gem 'middleman', '>= 4.0.0'
+gem 'middleman-blog'
+gem 'middleman-livereload'
+gem 'middleman-sprockets'
+gem 'neat'
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
+gem 'wdm', '~> 0.1.0', platforms: [:mswin, :mingw]

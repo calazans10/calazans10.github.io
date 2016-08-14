@@ -1,0 +1,9 @@
+// Mixins
+@mixin width-for-columns($columns) {
+  $width: ($columns * $column) + (($columns - 1) * $gutter);
+  $halth-width: $width / 2;
+
+  @include clearfix();
+  padding-left: calc(50% - #{$halth-width});
+  padding-right: calc(50% - #{$halth-width});
+}
