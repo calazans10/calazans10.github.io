@@ -4,9 +4,7 @@
   &__description,
   &__text {
     margin-bottom: 15px;
-    color: #666;
     font-family: proxima nova;
-    font-size: 16px;
     letter-spacing: 0.25px;
     line-height: 24px;
   }
@@ -14,6 +12,11 @@
   &__description {
     color: #000;
     font-size: 18px;
+  }
+
+  &__text {
+    color: #666;
+    font-size: 16px;
   }
 
   &__items {
@@ -33,5 +36,29 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 100% 100%;
+
+    &--twitter {
+      width: 20px;
+      height: 17px;
+      background-image: asset-data-url('images/twitter-icon.png');
+    }
+
+    &--linkedin {
+      width: 20px;
+      height: 20px;
+      background-image: asset-data-url('images/linkedin-icon.png');
+    }
+
+    &--github {
+      width: 20px;
+      height: 20px;
+      background-image: asset-data-url('images/github-icon.png');
+    }
+
+    &--message {
+      width: 22px;
+      height: 16px;
+      background-image: asset-data-url('images/message-icon.png');
+    }
   }
 }

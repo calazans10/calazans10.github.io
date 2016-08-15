@@ -27,53 +27,9 @@
   background-size: 100% 100%;
 }
 
-.menu #footer {
-  @include width-for-columns(12);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 63px;
-  border-top: 1px solid rgba(#f0f0f0, 0.1);
-  line-height: 63px;
-}
-
-.menu #footer p {
-  font-family: proxima nova;
-  font-size: 16px;
-  font-weight: 400;
-  letter-spacing: 0.25px;
-}
-
 figure {
   @include span-columns(5);
   margin-right: 49px;
 
   img { width: 100%; }
-}
-
-.section__link {
-  &[data-name="twitter"] {
-    width: 20px;
-    height: 17px;
-    background-image: asset-data-url('images/twitter-icon.png');
-  }
-
-  &[data-name="linkedin"] {
-    width: 20px;
-    height: 20px;
-    background-image: asset-data-url('images/linkedin-icon.png');
-  }
-
-  &[data-name="github"] {
-    width: 20px;
-    height: 20px;
-    background-image: asset-data-url('images/github-icon.png');
-  }
-
-  &[data-name="message"] {
-    width: 22px;
-    height: 16px;
-    background-image: asset-data-url('images/message-icon.png');
-  }
 }
