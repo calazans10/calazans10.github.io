@@ -22,23 +22,21 @@
   align-items: center;
   padding-top: 23px;
   padding-bottom: 23px;
-  border-top: 1px solid rgba(#000, 0.05);
+  border-top: 1px solid $footer-border-color;
 
   &__copyright {
-    color: #888;
-    font-family: proxima nova;
+    color: $footer-text-color;
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 0.25px;
     line-height: 15px;
   }
 
-  &__items { margin-left: auto; }
+  &__list { margin-left: auto; }
 
   &__item {
     display: inline-block;
     margin-right: 37px;
-    font-family: proxima nova;
     font-size: 16px;
     font-weight: 400;
     letter-spacing: 0.25px;

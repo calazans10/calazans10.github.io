@@ -1,9 +1,18 @@
-// Mixins
-@mixin width-for-columns($columns) {
-  $width: ($columns * $column) + (($columns - 1) * $gutter);
-  $halth-width: $width / 2;
+@import 'neat-helpers';
 
-  @include clearfix();
-  padding-left: calc(50% - #{$halth-width});
-  padding-right: calc(50% - #{$halth-width});
-}
+$column: 65px;
+$gutter: 30px;
+$grid-columns: 12;
+$max-width: 1140px;
+
+$base-font-family: 'Proxima Nova', 'proxima-nova', sans-serif;
+$logo-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+$base-link-color: #0069ff;
+$base-background-color: #fff;
+
+$footer-text-color: #888;
+$footer-border-color: rgba(#000, 0.05);
+
+$about-bio-text-color: #666;
+$about-bio-headline-color: #000;

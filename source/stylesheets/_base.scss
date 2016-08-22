@@ -7,8 +7,8 @@ html { box-sizing: border-box; }
 }
 
 body {
-  background: #fff;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: $base-background-color;
+  font-family: $base-font-family;
 }
 
 h1,
@@ -19,8 +19,7 @@ h5,
 h6,
 ol,
 ul,
-p,
-figure {
+p {
   margin: 0;
   padding: 0;
 }
@@ -31,15 +30,13 @@ ul {
 }
 
 a {
-  color: #0069ff;
+  color: $base-link-color;
   text-decoration: none;
 
   &:hover {
     text-decoration: underline;
   }
 }
-
-.overlay { overflow: hidden; }
 
 .visuallyhidden {
   position: absolute;

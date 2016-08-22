@@ -9,6 +9,7 @@
   &:hover { text-decoration: none; }
 
   span {
+    font-family: $logo-font-family;
     font-size: 24px;
     font-weight: bold;
     letter-spacing: 0.5px;
@@ -28,14 +29,13 @@
 
   p {
     margin-bottom: 15px;
-    color: #666;
-    font-family: proxima nova;
+    color: $about-bio-text-color;
     font-size: 16px;
     letter-spacing: 0.25px;
     line-height: 24px;
 
     &:first-of-type {
-      color: #000;
+      color: $about-bio-headline-color;
       font-size: 18px;
     }
   }
