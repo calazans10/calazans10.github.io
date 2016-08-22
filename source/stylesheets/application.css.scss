@@ -6,30 +6,3 @@
 @import 'base';
 @import 'layout';
 @import 'modules';
-
-// TODO: nomear os elementos
-.header [data-toggle="menu"] {
-  display: block;
-  width: 38px;
-  height: 38px;
-  margin-left: auto;
-  background: asset-data-url('images/menu-icon.png') center center no-repeat;
-  background-size: 100% 100%;
-}
-
-.menu [data-toggle="menu"] {
-  position: absolute;
-  top: 40px;
-  right: calc(50% - 575px);
-  width: 42px;
-  height: 42px;
-  background: asset-data-url('images/close-icon.png') no-repeat center center;
-  background-size: 100% 100%;
-}
-
-figure {
-  @include span-columns(5);
-  margin-right: 49px;
-
-  img { width: 100%; }
-}

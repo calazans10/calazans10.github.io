@@ -1,30 +1,51 @@
-.section {
+.logo {
+  display: block;
+  width: 288px;
+  height: 40px;
+  background: asset-data-url('images/logo.png') center left no-repeat;
+  background-size: 48px 100%;
+  text-align: right;
+
+  &:hover { text-decoration: none; }
+
+  span {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    line-height: 40px;
+  }
+}
+
+.avatar {
+  @include span-columns(5);
+  margin-right: 49px;
+
+  img { width: 100%; }
+}
+
+.about-bio {
   @include span-columns(5);
 
-  &__description,
-  &__text {
+  p {
     margin-bottom: 15px;
+    color: #666;
     font-family: proxima nova;
+    font-size: 16px;
     letter-spacing: 0.25px;
     line-height: 24px;
-  }
 
-  &__description {
-    color: #000;
-    font-size: 18px;
+    &:first-of-type {
+      color: #000;
+      font-size: 18px;
+    }
   }
+}
 
-  &__text {
-    color: #666;
-    font-size: 16px;
-  }
-
-  &__items {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 30px;
-  }
+.social-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 30px;
 
   &__item {
     display: inline-block;

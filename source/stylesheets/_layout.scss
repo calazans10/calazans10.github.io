@@ -1,4 +1,4 @@
-.header {
+.main-header {
   @include width-for-columns(12);
   display: flex;
   flex-direction: row;
@@ -6,87 +6,7 @@
   margin-top: 49px;
 }
 
-.brand {
-  font-size: 24px;
-  letter-spacing: 0.5px;
-
-  &--light {
-    @include width-for-columns(12);
-    margin-top: 35px;
-  }
-
-  &__logo {
-    display: block;
-    height: 40px;
-    background: asset-data-url('images/logo.png') center left no-repeat;
-    background-size: 48px 100%;
-    line-height: 40px;
-
-    &:hover { text-decoration: none; }
-
-    .brand--light & { background-image: asset-data-url('images/logo-light.png'); }
-
-    span { margin-left: 68px; }
-  }
-}
-
-.menu {
-  display: none;
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  width: calc(100% - 30px);
-  height: calc(100% - 30px);
-  background: rgba(0, 105, 255, 0.90);
-  color: #fff;
-  overflow: auto;
-  z-index: 10;
-
-  .overlay & { display: block; }
-
-  &__items {
-    @include width-for-columns(12);
-    position: absolute;
-    top: calc(50% - 210px);
-    left: 0;
-    height: 420px;
-    margin-bottom: 81px;
-  }
-
-  &__item {
-    color: #fff;
-    font-family: "proxima-nova-condensed", "Proxima Nova Condensed", sans-serif;
-    font-size: 32px;
-    font-weight: 400;
-    letter-spacing: 3px;
-    line-height: 70px;
-    text-transform: uppercase;
-
-    &--active { text-decoration: underline; }
-
-    a { color: inherit; }
-  }
-
-  &__copyright {
-    @include width-for-columns(12);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 63px;
-    border-top: 1px solid rgba(#f0f0f0, 0.1);
-    line-height: 63px;
-
-    p {
-      font-family: proxima nova;
-      font-size: 16px;
-      font-weight: 400;
-      letter-spacing: 0.25px;
-    }
-  }
-}
-
-.main {
+.main-content {
   @include width-for-columns(12);
   display: flex;
   flex-direction: row;
@@ -95,7 +15,7 @@
   padding-bottom: 123px;
 }
 
-.footer {
+.main-footer {
   @include width-for-columns(12);
   display: flex;
   flex-direction: row;

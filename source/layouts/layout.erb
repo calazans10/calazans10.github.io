@@ -9,62 +9,27 @@
     <%= javascript_include_tag :application %>
   </head>
   <body>
-    <header class="header">
-      <div class="brand">
-        <a class="brand__logo" href="<% url_for 'index.html' %>">
-          <span>Jeferson Calazans</span>
-        </a>
-      </div>
-      <a data-toggle="menu" href="#">
-        <span class="visuallyhidden">Abrir menu</span>
+    <header class="main-header">
+      <a class="logo" href="/">
+        <span>Jeferson Calazans</span>
       </a>
-      <nav class="menu">
-        <div class="brand brand--light">
-          <a class="brand__logo" href="<% url_for 'index.html' %>">
-            <span class="visuallyhidden">Jeferson Calazans</span>
-          </a>
-        </div>
-        <a data-toggle="menu" href="#">
-          <span class="visuallyhidden">Fechar menu</span>
-        </a>
-        <ul class="menu__items">
-          <li class="menu__item menu__item--active">
-            <a href="<% url_for 'index.html' %>">Home</a>
-          </li>
-          <li class="menu__item">
-            <a href="https://twitter.com/calazans10">Twitter</a>
-          </li>
-          <li class="menu__item">
-            <a href="https://www.linkedin.com/in/calazans10">Linkedin</a>
-          </li>
-          <li class="menu__item">
-            <a href="https://github.com/calazans10">Github</a>
-          </li>
-          <li class="menu__item">
-            <a href="mailto:calazans10@gmail.com">Contato</a>
-          </li>
-        </ul>
-        <div class="menu__copyright">
-          <p>&copy; <%= Date.today.year%> Jeferson Calazans.</p>
-        </div>
-      </nav>
     </header>
-    <main class="main">
+    <main class="main-content">
       <%= yield %>
     </main>
-    <footer class="footer">
-      <p class="footer__copyright">&copy; <%= Date.today.year%> Jeferson Calazans.</p>
-      <ul class="footer__items">
-        <li class="footer__item">
+    <footer class="main-footer">
+      <p class="main-footer__copyright">&copy; <%= Date.today.year%> Jeferson Calazans.</p>
+      <ul class="main-footer__items">
+        <li class="main-footer__item">
           <a href="https://twitter.com/calazans10">Twitter</a>
         </li>
-        <li class="footer__item">
+        <li class="main-footer__item">
           <a href="https://www.linkedin.com/in/calazans10">Linkedin</a>
         </li>
-        <li class="footer__item">
+        <li class="main-footer__item">
           <a href="https://github.com/calazans10">Github</a>
         </li>
-        <li class="footer__item">
+        <li class="main-footer__item">
           <a href="mailto:calazans10@gmail.com">Contato</a>
         </li>
       </ul>
