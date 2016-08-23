@@ -9,10 +9,11 @@
 .main-content {
   @include width-for-columns(12);
   display: flex;
+  flex: 1;
   flex-direction: row;
   justify-content: center;
-  padding-top: 99px;
-  padding-bottom: 123px;
+  padding-top: 90px;
+  padding-bottom: 120px;
 }
 
 .main-footer {
