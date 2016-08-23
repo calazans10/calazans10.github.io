@@ -26,22 +26,16 @@
   border-top: 1px solid $footer-border-color;
 
   &__copyright {
+    @extend %footer-typography;
     color: $footer-text-color;
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 0.25px;
-    line-height: 15px;
   }
 
   &__list { margin-left: auto; }
 
   &__item {
+    @extend %footer-typography;
     display: inline-block;
     margin-right: 37px;
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 0.25px;
-    line-height: 15px;
 
     &:last-child { margin-right: 0; }
   }

@@ -7,3 +7,10 @@
   padding-left: calc(50% - #{$halth-width});
   padding-right: calc(50% - #{$halth-width});
 }
+
+// Placeholders
+%footer-typography {
+  font-size: 16px;
+  letter-spacing: 0.25px;
+  line-height: 15px;
+}
