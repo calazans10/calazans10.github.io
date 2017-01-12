@@ -12,28 +12,3 @@
   padding-top: 90px;
   padding-bottom: 120px;
 }
-
-.main-footer {
-  @include width-for-columns(12);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding-top: 23px;
-  padding-bottom: 23px;
-  border-top: 1px solid $footer-border-color;
-
-  &__copyright {
-    @extend %footer-typography;
-    color: $footer-text-color;
-  }
-
-  &__list { margin-left: auto; }
-
-  &__item {
-    @extend %footer-typography;
-    display: inline-block;
-    margin-right: 37px;
-
-    &:last-child { margin-right: 0; }
-  }
-}
