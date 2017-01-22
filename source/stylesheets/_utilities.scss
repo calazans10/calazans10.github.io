@@ -8,10 +8,13 @@
   padding-right: calc(50% - #{$halth-width});
 }
 
-// Placeholders
-%footer-typography {
-  font-size: 16px;
-  font-weight: 400;
-  letter-spacing: 0.25px;
-  line-height: 15px;
+// Functions
+@function em($pxval, $base: 16) {
+  @if not unitless($pxval) {
+    $pxval: strip-units($pxval);
+  }
+  @if not unitless($base) {
+    $base: strip-units($base);
+  }
+  @return ($pxval / $base) * 1em;
 }

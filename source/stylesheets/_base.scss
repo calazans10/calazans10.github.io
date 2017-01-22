@@ -1,5 +1,7 @@
 html {
   height: 100%;
+  font-size: 1rem;
+  line-height: 1.3em;
   box-sizing: border-box;
 }
 
@@ -10,11 +12,27 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
+  margin: 0 auto;
+  padding: em(30) em(20);
   background: $base-background-color;
   font-family: $base-font-family;
+
+  @media (min-width: 600px) {
+    padding-right: em(75);
+    padding-left: em(75);
+  }
+
+  @media (min-width: 900px) {
+    padding-right: em(155);
+    padding-left: em(155);
+  }
+
+  @media (min-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    padding: 0;
+  }
 }
 
 h1,
@@ -37,20 +55,8 @@ ul {
 
 a {
   color: $base-link-color;
-  text-decoration: none;
 
-  &:hover {
-    text-decoration: underline;
-  }
-}
+  &:visited { color: $base-link-color; }
 
-.visuallyhidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  border: none;
-  overflow: hidden;
+  &:hover { color: $base-link-hover-color; }
 }

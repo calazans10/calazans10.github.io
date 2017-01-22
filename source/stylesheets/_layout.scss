@@ -1,14 +1,80 @@
 .main-header {
-  @include width-for-columns(12);
-  margin-top: 49px;
+  margin-top: em(30);
+
+  @media (min-width: 1200px) {
+    @include width-for-columns(12);
+    margin-top: em(49);
+  }
 }
 
 .main-content {
-  @include width-for-columns(12);
-  display: flex;
-  flex: 1;
-  flex-direction: row;
-  justify-content: center;
-  padding-top: 90px;
-  padding-bottom: 120px;
+  margin-top: em(50);
+
+  @media (min-width: 1200px) {
+    @include width-for-columns(12);
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: em(90);
+  }
+}
+
+.logo {
+  display: block;
+  width: 100%;
+  height: 40px;
+  background: asset-data-url('images/logo.png') center center no-repeat;
+  background-size: 48px 100%;
+
+  @media (min-width: 600px) {
+    background-image: asset-data-url('images/logo-medium.png');
+    background-size: 287px 100%;
+  }
+
+  @media (min-width: 1200px) {
+    background-position: left center;
+  }
+}
+
+.avatar {
+  display: none;
+
+  @media (min-width: 1200px) {
+    @include span-columns(5);
+    display: block;
+    margin-right: em(49);
+  }
+
+  img { width: 100%; }
+}
+
+.about-bio {
+  @media (min-width: 1200px) {
+    @include span-columns(5);
+  }
+
+  p {
+    color: $about-bio-text-color;
+    letter-spacing: 0.25px;
+    line-height: 1.5em;
+
+    &:first-of-type {
+      color: $about-bio-headline-color;
+      font-size: 1.125em;
+    }
+
+    &:not(:last-of-type) { margin-bottom: em(15); }
+  }
+}
+
+.visuallyhidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  border: none;
+  overflow: hidden;
 }
