@@ -57,11 +57,11 @@
   p {
     color: $about-bio-text-color;
     letter-spacing: 0.25px;
-    line-height: 1.5em;
+    line-height: 1.5;
 
     &:first-of-type {
       color: $about-bio-headline-color;
-      font-size: 1.125em;
+      font-size: 1.125rem;
     }
 
     &:not(:last-of-type) { margin-bottom: em(15); }
