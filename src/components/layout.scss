@@ -1,0 +1,102 @@
+@charset 'utf-8';
+@import "normalize.css/normalize";
+@import "../styles/config";
+@import "../styles/functions";
+@import "../styles/mixins";
+@import "../styles/base";
+
+.main-wrapper {
+  margin: 0 auto;
+  padding: rem(30) rem(20);
+
+  @include respond-to("tablet") {
+    padding-right: rem(75);
+    padding-left: rem(75);
+  }
+
+  @include respond-to("desktop") {
+    padding-right: rem(155);
+    padding-left: rem(155);
+  }
+
+  @include respond-to("monitor") {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    padding: 0;
+  }
+}
+
+.main-header {
+  margin-top: rem(30);
+
+  @include respond-to("monitor") {
+    @include width-for-columns(12);
+    margin-top: rem(49);
+  }
+}
+
+.main-content {
+  margin-top: rem(50);
+
+  @include respond-to("monitor") {
+    @include width-for-columns(12);
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: rem(90);
+  }
+}
+
+.logo {
+  display: block;
+  width: 100%;
+  height: rem(40);
+  background: url("../images/logo.png") center center no-repeat;
+  background-size: rem(48) 100%;
+
+  @include respond-to("tablet") {
+    background-image: url("../images/logo-medium.png");
+    background-size: 287px 100%;
+  }
+
+  @include respond-to("monitor") {
+    background-position: left center;
+  }
+}
+
+.avatar {
+  display: none;
+
+  @include respond-to("monitor") {
+    display: block;
+    width: 40.09009%;
+    margin-right: rem(49);
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.biography {
+  @include respond-to("monitor") {
+    width: 40.09009%;
+  }
+
+  p {
+    color: $biography-text-color;
+    letter-spacing: 0.016em;
+    line-height: lh(16px, 24px);
+
+    &:first-of-type {
+      color: $biography-headline-color;
+      font-size: em(18);
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: rem(15);
+    }
+  }
+}

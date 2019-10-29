@@ -1,0 +1,37 @@
+@mixin width-for-columns($columns) {
+  $width: ($columns * $column) + (($columns - 1) * $gutter);
+  $halth-width: $width / 2;
+
+  padding-left: calc(50% - #{$halth-width});
+  padding-right: calc(50% - #{$halth-width});
+}
+
+@mixin respond-to($breakpoint) {
+  $raw-query: map-get($breakpoints, $breakpoint);
+
+  @if $raw-query {
+    $query: if(
+      type-of($raw-query) == "string",
+      unquote($raw-query),
+      inspect($raw-query)
+    );
+
+    @media #{$query} {
+      @content;
+    }
+  } @else {
+    @error 'No value found for `#{$breakpoint}`. ' + 'Please make sure it is defined in `$breakpoints` map.';
+  }
+}
+
+$breakpoints: (
+  tablet: (
+    min-width: em(600),
+  ),
+  desktop: (
+    min-width: em(900),
+  ),
+  monitor: (
+    min-width: em(1200),
+  ),
+);
