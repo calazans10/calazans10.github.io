@@ -1,2 +1,4 @@
 User-agent: *
-Disallow:
+Allow: /
+Sitemap: http://calazans10.com/sitemap.xml
+Host: calazans10.com
