@@ -46,8 +46,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
-        typekit: {
-          id: `fbh7blq`,
+        google: {
+          families: [`Nunito Sans`],
         },
       },
     },
