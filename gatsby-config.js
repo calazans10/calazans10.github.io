@@ -36,6 +36,7 @@ module.exports = {
         icon: `src/images/logo-large.png`, // This path is relative to the root of the site.
       },
     },
+    `gatsby-plugin-emotion`,
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-plugin-google-analytics`,
