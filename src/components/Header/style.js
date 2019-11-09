@@ -1,5 +1,5 @@
-import styled from "./node_modules/@emotion/styled"
-import { em, rem, hideVisually } from "./node_modules/polished"
+import styled from "@emotion/styled"
+import { em, rem, hideVisually } from "polished"
 
 import logo from "../../images/logo.png"
 import logoMedium from "../../images/logo-medium.png"

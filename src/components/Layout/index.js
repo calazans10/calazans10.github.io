@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { Global } from "@emotion/core"
 
-import Header from "../header"
+import Header from "../Header"
 import { GlobalStyles, PageContainer, Main } from "./style"
 
 function Layout({ children }) {
