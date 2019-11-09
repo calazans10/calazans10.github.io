@@ -1,12 +1,12 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Layout from "../components/layout"
-import Avatar from "../components/avatar"
-import Biography from "../components/biography"
-import SEO from "../components/seo"
+import Layout from "../components/Layout"
+import Avatar from "../components/Avatar"
+import Biography from "../components/Biography"
+import SEO from "../components/SEO"
 
-const IndexPage = () => {
+function IndexPage() {
   const { site } = useStaticQuery(graphql`
     query SiteDescriptionQuery {
       site {
