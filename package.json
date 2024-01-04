@@ -58,12 +58,14 @@
     "lint-staged": "^15.2.0",
     "prettier": "3.1.1",
     "prettier-plugin-organize-imports": "^3.2.4",
+    "tsc-files": "^1.1.4",
     "typescript": "^5.3.3"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "eslint --quiet --fix",
-      "prettier --write --ignore-unknown"
+      "prettier --write --ignore-unknown",
+      "tsc-files --noEmit"
     ],
     "*.{json,html}": [
       "prettier --write --ignore-unknown"

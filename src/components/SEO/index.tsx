@@ -3,19 +3,13 @@ import logoLarge from "images/logo-large.png"
 import * as React from "react"
 import { Helmet } from "react-helmet"
 
-type Meta = {
-  content: string
-  property: string
-}
-
 type Props = {
   description?: string
   lang?: string
-  meta?: Meta[]
   title?: string
 }
 
-const SEO: React.FC<Props> = ({ description = "", lang = "pt-br", meta = [], title = "" }) => {
+const SEO: React.FC<Props> = ({ description = "", lang = "pt-br", title = "" }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -96,7 +90,7 @@ const SEO: React.FC<Props> = ({ description = "", lang = "pt-br", meta = [], tit
           name: `twitter:image`,
           content: logoLarge,
         },
-      ].concat(meta)}
+      ]}
     />
   )
 }
