@@ -1,5 +1,5 @@
 import styled from "@emotion/styled"
-import { em, rem, math, stripUnit } from "polished"
+import { em, math, rem, stripUnit } from "polished"
 
 export const Container = styled.div`
   @media (min-width: ${em("1200px")}) {

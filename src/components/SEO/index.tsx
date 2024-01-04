@@ -1,28 +1,37 @@
-import React from "react"
-import PropTypes from "prop-types"
-import Helmet from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
+import logoLarge from "images/logo-large.png"
+import * as React from "react"
+import { Helmet } from "react-helmet"
 
-function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            authorName
-            siteUrl
-            image
-            twitterUsername
-          }
+type Meta = {
+  content: string
+  property: string
+}
+
+type Props = {
+  description?: string
+  lang?: string
+  meta?: Meta[]
+  title?: string
+}
+
+const SEO: React.FC<Props> = ({ description = "", lang = "pt-br", meta = [], title = "" }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+          description
+          authorName
+          siteUrl
+          twitterUsername
         }
       }
-    `
-  )
+    }
+  `)
 
-  const metaDescription = description || site.siteMetadata.description
-  const metaTitle = title || site.siteMetadata.title
+  const metaDescription = description || data.site.siteMetadata.description
+  const metaTitle = title || data.site.siteMetadata.title
 
   return (
     <Helmet
@@ -41,11 +50,11 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:siteUrl`,
-          content: site.siteMetadata.siteUrl,
+          content: data.site.siteMetadata.siteUrl,
         },
         {
           property: `og:site_name`,
-          content: `Página pessoal de ${site.siteMetadata.authorName}`,
+          content: `Página pessoal de ${data.site.siteMetadata.authorName}`,
         },
         {
           property: `og:title`,
@@ -57,7 +66,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `og:image`,
-          content: site.siteMetadata.image,
+          content: logoLarge,
         },
         {
           property: `og:type`,
@@ -69,11 +78,11 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:site`,
-          content: site.siteMetadata.twitterUsername,
+          content: data.site.siteMetadata.twitterUsername,
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.twitterUsername,
+          content: data.site.siteMetadata.twitterUsername,
         },
         {
           name: `twitter:title`,
@@ -85,25 +94,11 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:image`,
-          content: site.siteMetadata.image,
+          content: logoLarge,
         },
       ].concat(meta)}
     />
   )
-}
-
-SEO.defaultProps = {
-  lang: `pt-br`,
-  meta: [],
-  description: ``,
-  title: ``,
-}
-
-SEO.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string,
 }
 
 export default SEO

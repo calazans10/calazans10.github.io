@@ -1,8 +1,7 @@
 import styled from "@emotion/styled"
-import { em, rem, hideVisually } from "polished"
-
-import logo from "../../images/logo.png"
-import logoMedium from "../../images/logo-medium.png"
+import logoMedium from "images/logo-medium.png"
+import logo from "images/logo.png"
+import { em, hideVisually, rem } from "polished"
 
 export const Container = styled.header`
   margin-top: ${rem("30px")};

@@ -1,6 +1,6 @@
-import { css } from "@emotion/core"
+import { css } from "@emotion/react"
 import styled from "@emotion/styled"
-import { em, rem, normalize } from "polished"
+import { em, normalize, rem } from "polished"
 
 export const GlobalStyles = css`
   ${normalize()}
