@@ -6,15 +6,14 @@ import { Helmet } from "react-helmet"
 type Props = {
   description?: string
   lang?: string
-  title?: string
+  title: string
 }
 
-const SEO: React.FC<Props> = ({ description = "", lang = "pt-br", title = "" }) => {
+const SEO: React.FC<Props> = ({ description = "", lang = "pt-br", title }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
         siteMetadata {
-          title
           description
           authorName
           siteUrl
@@ -25,14 +24,13 @@ const SEO: React.FC<Props> = ({ description = "", lang = "pt-br", title = "" }) 
   `)
 
   const metaDescription = description || data.site.siteMetadata.description
-  const metaTitle = title || data.site.siteMetadata.title
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      defaultTitle={metaTitle}
+      defaultTitle={title}
       meta={[
         {
           name: `description`,
@@ -52,7 +50,7 @@ const SEO: React.FC<Props> = ({ description = "", lang = "pt-br", title = "" }) 
         },
         {
           property: `og:title`,
-          content: metaTitle,
+          content: title,
         },
         {
           property: `og:description`,
@@ -80,7 +78,7 @@ const SEO: React.FC<Props> = ({ description = "", lang = "pt-br", title = "" }) 
         },
         {
           name: `twitter:title`,
-          content: metaTitle,
+          content: title,
         },
         {
           name: `twitter:description`,
