@@ -10,10 +10,10 @@ const Biography: React.FC<Props> = ({ siteDescription }) => {
     <Container>
       <Paragraph>{siteDescription}</Paragraph>
       <Paragraph>
-        As a passionate software developer, Jeferson has worked for several technology companies in
-        various industries, from payments to e-commerce. Since the beginning of his career, Jeferson
-        has adapted to each situation, helping the companies he worked with build well-crafted
-        applications. He is always open-minded and eager to learn new methodologies and
+        As a passionate software developer, Jeferson has worked for several technology companies
+        across a range of industries, from payments to e-commerce. Since the beginning of his
+        career, he has adapted to each new context, helping the companies he worked with build
+        well-crafted applications. He is always open-minded and eager to learn new methodologies and
         technologies.
       </Paragraph>
       <Paragraph>
