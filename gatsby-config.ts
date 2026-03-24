@@ -4,10 +4,10 @@ import type { GatsbyConfig } from "gatsby"
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `Jeferson Calazans | Software Developer`,
-    description: `Jeferson Calazans is a passionate software developer with a degree in Computer Science. He has been working with web development for the past ${differenceInYears(
+    description: `Jeferson Calazans is a passionate software developer with a degree in Computer Science and ${differenceInYears(
       new Date(),
       new Date(2011, 10, 1)
-    )} years.`,
+    )} years of experience in web and software development across multiple industries.`,
     authorName: `Jeferson Calazans`,
     authorFullName: `Jeferson Farias Calazans`,
     siteUrl: `http://calazans10.com`,
