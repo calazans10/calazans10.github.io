@@ -17,9 +17,10 @@ const Biography: React.FC<Props> = ({ siteDescription }) => {
         technologies.
       </Paragraph>
       <Paragraph>
-        When he is not working, you will find Jeferson wandering through the beautiful landscapes
-        around Rio de Janeiro or hanging out with his son and wife. He is also into reading books,
-        listening to music and the radio show RoNca RoNca, and watching movies and TV series.
+        When he is not working, you will likely find Jeferson exploring the beautiful landscapes
+        around Rio de Janeiro or spending time with his wife and son. He is also an avid reader,
+        enjoys listening to music and the radio show RoNca RoNca, and likes watching movies and TV
+        series.
       </Paragraph>
       <Paragraph>
         If you want to know more about him, take a look at his profile on{" "}
